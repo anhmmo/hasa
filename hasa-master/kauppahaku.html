@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <meta charset="utf-8">
+  <title>Kauppahaku</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="css/kauppahaku.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://img.icons8.com/dusk/64/000000/home.png" type="image/x-icon">
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+
+  <!-- Leaflet routing machine -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+  <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+</head>
+
+<body class="osa">
+
+    <h1 class="osa" id="otsikko">The Shop Routing Service™</h1>
+
+    <div id="kartta">
+      <div id="map"></div>
+      <button class="osa" id="locateUser">Hae sijaintini</button>
+    </div>
+   
+    <div class="osa" id="haku">
+      <div class="osa" id="kauppahaku">
+	<h3>Kauppahaku</h3>
+	<form class="osa">
+	  <label class="osa">Lähtöosoite: </label><input type="text" value="itälahdenkatu" id="kauppa_lahto" /> <br />
+	  <label class="osa">Numero: </label><input type="text" maxlength="4" size="4" value="1" id="kauppa_lahto_numero" />  <br />
+	  <label class="osa">Kaupunki: </label><input type="text" value="Helsinki" id="kauppa_lahto_kaupunki" /><br />
+	  <label class="osa">Kauppa: </label> <br />
+	  <select class="osa" id="kaupat_select">
+	    <option value="alepa">Alepa</option>
+	    <option value="kmarket">K-market</option>
+	  </select>
+	  <br /><br />
+	  <button class="osa nappi" id="kauppahakunappi">Hae reitti</button>
+	</form>
+      </div>
+      <div class="osa" id="reittihaku">
+	<h3>Reittihaku</h3>
+	<form class="osa">
+	  <label class="osa">Lähtöosoite: </label><input type="text" value="itälahdenkatu" id="lahto_osoite" /> <br />
+	  <label class="osa">Numero: </label><input type="text" maxlength="4" size="4" value="5" id="lahto_numero" /> <br />
+	  <label class="osa">Kaupunki: </label><input type="text" value="Helsinki" id="lahto_kaupunki" /><br />
+	  <label class="osa">Kohdeosoite: </label><input type="text" value="tallbergin puistotie" id="kohde_osoite" /> <br />
+	  <label class="osa">Numero: </label><input type="text" maxlength="4" size="4" value="9" id="kohde_numero" /> <br />
+	  <label class="osa">Kaupunki: </label><input type="text" value="Helsinki" id="kohde_kaupunki" /><br />
+	  <button class="osa nappi" id="reittihakuNappi">Hae reitti</button><br />
+	</form>
+      </div>
+    </div>
+
+    <footer>Placeholder</footer>
+  <script src="js/kauppahaku.js"></script>
+</body>
+
+</html>
+

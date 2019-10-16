@@ -1,0 +1,306 @@
+html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Be Vietnam', sans-serif;
+    overflow-x: hidden;
+}
+
+body{
+ background-image: url(img/2586093.jpg);
+ background-size: cover;
+ background-attachment: fixed;
+
+
+}
+
+#myVideo {
+  
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 1;
+}
+.mainbox{
+  position: relative;
+ 
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.7);
+  width: 80%;
+  margin-left: 10%;
+height: 60vh;
+margin-bottom: 80px;
+margin-left: 20%;
+
+}
+
+p{
+  position: relative;
+  font-size: 20px;
+  color: white;
+  padding: 20px;
+  word-wrap: break-word;
+}
+
+.valikko{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+h1{
+  position: relative;
+  color: white;
+}
+
+h2{
+  position: relative;
+  box-shadow: 0 3px 6px 0 rgba(83, 80, 80, 0.5);
+  width: 40%;
+  margin-left: 30%;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 50px;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    position: relative;
+    margin-left: 40%;
+}
+
+.card {
+  position: relative;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.7);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+ 
+}
+img{
+  position: relative;
+  border-bottom: 0.5px solid rgba(255, 253, 253, 0.7);
+}
+.title {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+
+button {
+  z-index: 1000;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background: #8A2387;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #E94057;  /* fallback for old browsers */
+
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 1400px){
+  .mainbox{
+    
+    width: 85%;
+   
+  height: 50vh;
+  margin-bottom: 80px;
+  margin-left: 15%;
+  
+  }
+
+  h2{
+   
+    width: 40%;
+   
+      margin-left: 30%;
+  }
+
+
+}
+
+
+@media only screen and (max-width: 1235px){
+  .mainbox{
+    
+    width: 100%;
+   
+  height: 50vh;
+  margin-bottom: 80px;
+  margin-left: 0;
+  
+  }
+
+  h2{
+   
+    width: 100%;
+   
+      margin-left: 0;
+  }
+
+
+}
+
+@media only screen and (max-width: 1010px){
+  .mainbox{
+    
+    width: 100%;
+   
+  height: 50vh;
+  margin-bottom: 30px;
+  margin-left: 0;
+  
+  }
+
+  h2{
+   
+    
+    font-size: 50px;
+     
+  }
+
+  p{
+    font-size: 18px;
+  }
+
+
+}
+
+
+@media only screen and (max-width: 900px){
+  .mainbox{
+    
+    width: 100%;
+   
+  height: 50vh;
+  margin-bottom: 30px;
+  margin-left: 0;
+  
+  }
+
+  h2{
+   
+    
+    font-size: 50px;
+     
+  }
+
+  p{
+    font-size: 16px;
+  }
+  .valikko{
+    flex-wrap: wrap;
+  }
+
+}
+
+
+
+
+@media only screen and (max-width: 630px){
+  .mainbox{
+    
+    width: 100%;
+   
+  height: 60vh;
+  margin-bottom: 50px;
+  margin-left: 0;
+  
+  }
+
+  h2{
+   
+    
+    font-size: 30px;
+     
+  }
+
+  p{
+    font-size: 15px;
+  }
+  .valikko{
+    flex-wrap: wrap;
+  }
+
+  .card {
+   
+    width: 100%;
+   margin-bottom: 20px;
+   
+  }
+
+}
+
+
+@media only screen and (max-width: 480px){
+  .mainbox{
+    
+    width: 100%;
+   
+  height: 70vh;
+  margin-bottom: 60px;
+  margin-left: 0;
+  
+  }
+p{
+  font-size: 13px;
+}
+
+}
+
+
+@media only screen and (max-width: 380px){
+  .mainbox{
+    
+    width: 100%;
+   
+  height: 100vh;
+  margin-bottom: 50px;
+  margin-left: 0;
+  
+  }
+p{
+  font-size: 14px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

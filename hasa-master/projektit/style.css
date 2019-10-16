@@ -1,0 +1,165 @@
+html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Be Vietnam', sans-serif;
+    overflow-x: hidden;
+}
+
+body{
+ background-image: url(img/2586093.jpg);
+ background-size: cover;
+ background-attachment: fixed;
+
+}
+
+h1{
+    font-family: 'Bungee Shade', cursive;
+    font-size: 50px;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.valikko{
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    
+}
+
+.laatikko{
+    width: 30%;
+    position: relative;
+    top: 10vh;
+    
+}
+
+.laatikko:not(:first-child){
+   
+    margin-left: 10px;
+}
+
+img{
+    width: 100%;
+    transition: transform 1.2s;
+    margin-bottom: 80px;
+    transform: scale(1.1);
+}
+
+
+img:hover{
+cursor: pointer;
+    transform: scale(1.8);
+}
+h2{
+    color: white;
+    text-align: center;
+}
+
+
+.hue_block:hover {
+    color: #fff;
+    background: #2BA6CB;
+    cursor: pointer;
+}
+
+
+.hue_block {
+    padding: 10px;
+    font-size: 25px;
+    background-color: #19C1C3;
+    width: 60%;
+   border-radius: 50px;
+   border: 2px white solid;
+   
+    margin: 0 auto;
+  
+    transition: all 0.3s ease-out;
+}
+
+
+
+
+
+a{
+    text-decoration: none;
+color: #fff;
+}
+  
+  
+  
+  .overlay {
+      z-index: 2;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+z-index: 4;
+  }
+  
+  .popup {
+    margin: 33px auto;
+    padding: 50px;
+    background: #fff;
+    border-radius: 5px;
+    width:50%;
+    position: relative;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+   
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+
+
+  @media screen and (max-width: 1300px){
+    .valikko{
+      flex-wrap: wrap;
+    width: 100%;
+      
+  }
+  
+  .laatikko{
+      width: 100%;
+  margin-bottom: 60px;
+      top: 5vh;
+      
+  }
+  }
+
+
+

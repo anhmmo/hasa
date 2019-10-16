@@ -1,0 +1,1341 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+body{
+    
+    position: relative;
+
+
+
+        background-position: 50% 50%;
+        background-size: cover;
+        background-attachment: fixed;
+   color: white;
+   font-family: 'Bitter', serif;
+   overflow-x: hidden;
+   
+
+   
+}
+
+
+
+#formcontainer{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin-top: 30px;
+   margin-left: 7%;
+  
+}
+
+
+
+h1{
+    font-family: 'Nanum Gothic', sans-serif;
+    z-index: 2;
+    position: absolute;
+    color: rgb(236, 236, 236);
+    font-size: 40px;
+    left: 250px;
+    top: -10px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+
+
+
+.hakulaatikko{
+width: 45%;
+
+}
+
+.hakunappi{
+    position: relative;
+    width: 10%;
+    background-color: #FF8E88;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: all .5s;
+    border-top-left-radius: 20px;
+    
+}
+
+
+
+    
+
+.about{
+    position: relative;
+    width: 10%;
+    background-color: #FF7B74;
+   
+    text-align: center;
+    transition: all .5s;
+}
+
+.lataus{
+    position: relative;
+    width: 10%;
+    background-color: #F4716A;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+    transition: all .5s;
+    border-top-right-radius: 5px;
+}
+
+#hakusyotto{
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    width: 95%;
+    padding: 20px;
+    outline: 0;
+    border: 0;
+    border-radius: 200px;
+    border: 1px solid #FF8E88;
+    color: #F4716A;
+    font-size: 30px;
+    text-align: center;
+    left: -40px;
+
+}
+
+::placeholder {
+    color: #FF8E88;
+    opacity: 1; /* Firefox */
+  }
+
+#hakusyotto:hover{
+    color: white;
+    transition: all 1s ease;
+    background-color: rgb(188, 245, 221);
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+#hakusyotto:hover::placeholder {
+  
+    opacity: 0; /* Firefox */
+  }
+  #hakusyotto:focus::placeholder {
+  
+    opacity: 0; /* Firefox */
+  }
+
+  
+
+
+a{
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    top: 55px;
+    font-size: 18px;
+   font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hakuicon{
+    position: absolute;
+    
+    top: 5px;
+    width: 45px;
+    left: 33%;
+    filter: invert(100%) sepia(0%) saturate(678%) hue-rotate(131deg) brightness(109%) contrast(104%);
+}
+
+
+   
+.hakunappi:hover, .about:hover, .lataus:hover{
+    cursor: pointer;
+    background-color: white;
+    }
+    
+    .hakunappi:hover .hakuicon{
+            
+            filter: invert(69%) sepia(61%) saturate(742%) hue-rotate(307deg) brightness(104%) contrast(110%);
+        }
+
+        .about:hover .hakuicon{
+            
+            filter: invert(69%) sepia(61%) saturate(742%) hue-rotate(307deg) brightness(104%) contrast(110%);
+        }
+
+        .lataus:hover .hakuicon{
+            
+            filter: invert(69%) sepia(61%) saturate(742%) hue-rotate(307deg) brightness(104%) contrast(110%);
+        }
+   
+    
+    
+.hakunappi:hover a{
+        
+        color: #FF8E88;
+      
+    }
+
+    .about:hover a{
+        
+        color: #FF8E88;
+      
+    }
+
+    .lataus:hover a{
+        
+        color: #FF8E88;
+      
+    }
+
+
+
+
+ #container{
+     display: flex;
+     justify-content: center;
+      width: 80%;
+     flex-wrap: wrap;
+     margin-bottom: 50px;
+      margin-left: 10%;
+      margin-top: 40px;
+  }
+
+  .frame1{
+     display: flex;
+    
+      width: 90%;
+      height: 300px;
+      background-color: white;
+      margin-top: 30px;
+      margin-left: 1%;
+      border: 1px solid #f2f2f2;
+    
+         box-shadow: 1px 1px .5px .5px rgb(226, 216, 216);
+      
+    
+  }
+
+  .frame1:hover{
+ 
+     box-shadow: 3px 3px 6px 6px rgb(197, 196, 196);
+   
+ }
+
+  .imgcontent{
+    position: relative;
+      width: 30%;
+      transition: all 1s;
+      overflow: hidden;
+      
+  }
+
+ 
+  
+  .img1{   
+      width: 130%;
+           height: 100%;
+           transition: transform 1s;
+  }
+
+  .img1:hover .picshadow{
+
+    display: block;
+    cursor: pointer;
+}
+
+.imgcontent:hover .img1{
+    
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+  .textcontent{
+    width: 70%;
+  margin-left: 20px;
+ 
+}
+
+
+.picshadow{
+      
+    display: none;
+    position: relative;
+    opacity: .5;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transition: all 1s;
+  
+
+}
+
+
+
+.fa-star{
+color: rgb(255, 240, 24);
+font-size: 20px;
+}
+
+
+h2{
+    
+    color: #F4716A;
+}
+p{
+    
+    color: #F4716A;
+}
+
+.line{
+    position: relative;
+    top: -10px;
+    color: rgb(177, 32, 32);
+    letter-spacing:2px;
+    font-size: 10px;
+}
+
+.buttonbtn{
+    background: #FF8E88;
+    outline: 0;
+    border: 0;
+    padding: 7px;
+    width: 180px;
+    margin-right: 30px;
+    color: white;
+    font-size: 20px;
+    transition: all 1s;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(48, 47, 47, 0.2);
+    text-transform: uppercase;
+   
+}
+
+.btna{
+    position: relative;
+    top: -5px;
+}
+
+.buttonbtn:hover{
+    background: rgb(63, 46, 46);
+ cursor: pointer;
+}
+
+
+
+.cooker{
+    display: flex;
+   
+}
+
+.zone1 img{
+    position: relative;
+    top: 10px;
+    width: 50px;
+    margin-right: 50px;
+
+}
+
+.zone2{
+    margin-right: 200px;
+}
+
+h5{
+    color: #F4716A;
+    position: relative;
+    top: -15px;
+    left: -10px;
+}
+
+.fa-cutlery{
+    color: #F4716A;
+    font-size: 20px;
+    margin-right: 10px;
+    position: relative;
+    top: -22px;
+}
+
+.fa-check-square-o{
+    font-size: 20px;
+    color: #F4716A;
+    position: relative;
+    top: -22px;
+}
+
+
+.ranking img{
+    
+    position: relative;
+   
+ 
+    
+}
+.ranking img{
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    left: 818px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+div.imgcontent * {
+    box-sizing: border-box;
+  }
+
+div.imgcontent i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    font-size: 34px;
+    color: #F4716A;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: #ffffff;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+ 
+  div.imgcontent.green {
+    background-color: #F4716A;
+  }
+  div.imgcontent.green i {
+    color: #F4716A;
+  }
+  
+  div.imgcontent:hover img {
+    opacity: 0.8;
+    filter: grayscale(10%);
+  }
+  
+
+  
+  div.imgcontent i {
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+  
+  div.imgcontent:hover i {
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+
+
+/*popup lataus*/
+.overlay {
+    z-index: 2;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+ 
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+z-index: 4;
+}
+
+.popup {
+  margin: 33px auto;
+  padding: 50px;
+  background: #fff;
+  border-radius: 5px;
+  width:50%;
+  position: relative;
+  
+}
+
+.popup p{
+    font-size: 25px;
+    
+  }
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+ 
+  overflow: auto;
+}
+
+
+  /*mobile media query*/
+
+
+  @media only screen and (max-width: 1400px) {
+    .imgcontent{
+        
+          width: 38%;
+     
+          
+      }
+
+    .img1{   
+        width: 130%;
+             height: 100%;
+             transition: transform 1s;
+    }
+   
+  }
+
+  @media only screen and (max-width: 1300px) {
+
+    h1{
+  
+        z-index: 0;
+       
+    }
+    
+
+    #formcontainer{
+      
+        flex-wrap: wrap;
+      margin-left: 5%;
+    }
+.frame1{
+    height: 340px;
+}
+    .hakulaatikko{
+        width: 90%;
+        margin-bottom: 40px;
+        margin-left: 5%;
+        }
+
+        .hakunappi{
+         
+            width: 20%;
+        
+            height: 100px;
+            
+        }
+        
+        .about{
+        width: 20%;
+            height: 100px;
+        
+        }
+        
+        .lataus{
+      
+            width: 20%;
+            height: 100px;
+        }
+
+        a{
+        
+            top: 70px;
+        
+        }
+        
+        .hakuicon{
+   
+            
+            top: 15px;
+           
+            left: 40%;
+            
+        }
+
+        .ranking img{
+           
+            left: 62%;
+            
+        }
+
+   
+  }
+
+
+
+
+  @media only screen and (max-width: 1210px) {
+
+    #container{
+         width: 100%;
+         margin-left: 0;
+     }
+   
+     .frame1{
+         width: 100%; 
+         margin-left: 0;
+         
+     }
+
+
+    .imgcontent{
+       
+          width: 30%;
+          
+          
+      }
+    
+      .img1{   
+          width: 100%;
+              
+      }
+    
+
+    .ranking img{
+        
+        left: 54%;
+        
+    }
+    
+  }
+
+
+
+
+  @media only screen and (max-width: 1110px) {
+
+
+    .imgcontent{
+       
+          width: 33%;  
+      }
+    
+      .img1{   
+          width: 130%;
+              
+      }
+    
+
+    .ranking img{
+        
+        left: 56%;
+        
+    }
+    
+  }
+   
+
+
+  @media only screen and (max-width: 1010px) {
+
+    .frame1{
+        
+         height: 270px;
+       
+     }
+
+    .imgcontent{
+       
+          width: 40%;  
+      }
+    
+      .img1{   
+          width: 120%;
+              
+      }
+    
+      .hakuicon{
+        left: 37%;  
+    }
+    
+
+    .fa-star{
+      
+        font-size: 15px;
+        }
+        
+        
+        h2{
+            font-size: 20px;
+            
+        }
+        p{
+            font-size: 14px;
+        }
+        
+        .line{
+         
+            top: -15px;
+            font-size: 7px;
+        }
+        
+        .buttonbtn{
+            position: relative;
+            padding: 6px;
+            width: 170px;
+            margin-right: 20px;
+            color: white;
+            font-size: 20px;
+            top: -20px;
+        }
+      
+        
+        .zone1 img{
+           
+            top: 0px;
+            width: 40px;
+            
+        }
+        
+        h5{
+          
+            top: -25px;
+            
+        }
+        
+        .fa-cutlery{
+           
+            font-size: 18px;
+            top: -40px;
+
+        }
+        
+        .fa-check-square-o{
+            font-size: 18px;
+            top: -40px;
+        }
+    
+        .ranking img{
+            width: 50px;
+            height: 40px;
+            left: 65%;
+            
+        }
+        
+        
+        
+        
+        
+
+    
+  }
+
+
+
+  
+  @media only screen and (max-width: 810px) {
+
+    .frame1{
+        
+         height: 250px;
+       
+     }
+
+     .hakuicon{
+        left: 35%;  
+    }
+
+    .fa-star{
+      
+        font-size: 14px;
+        }
+        
+        
+        h2{
+            font-size: 16px;
+            
+        }
+        p{
+            font-size: 13px;
+        }
+        
+        .line{
+         
+          
+            font-size: 6px;
+        }
+        
+        .buttonbtn{
+      
+            padding: 5px;
+          
+        }
+      
+  }
+
+
+  @media only screen and (max-width: 750px) {
+
+    .frame1{
+        
+         height: 230px;
+       
+     }
+
+     .hakuicon{
+        left: 32%;  
+    }
+
+
+     a{
+         font-size: 16px;
+     }
+
+    .fa-star{
+      
+        font-size: 14px;
+        }
+        
+        
+        h2{
+            font-size: 15px;
+            
+        }
+        p{
+            font-size: 12px;
+        }
+        
+        .line{
+         
+          
+            font-size: 6px;
+        }
+        
+        .buttonbtn{
+      font-size: 16px;
+            padding: 4px;
+          
+        }
+
+
+        h5{
+          font-size: 12px;
+           
+            
+        }
+        
+        .fa-cutlery{
+           
+            font-size: 15px;
+       
+
+        }
+        
+        .fa-check-square-o{
+            font-size: 15px;
+        
+        }
+    
+        .ranking img{
+            width: 40px;
+            height: 30px;
+            left: 75%;
+            
+        }
+
+        .zone1 img{
+        
+            top: -5px;
+    
+        }
+      
+  }
+
+
+
+  @media only screen and (max-width: 660px) {
+
+    .frame1{
+        
+         height: 200px;
+       
+     }
+
+     .hakuicon{
+        left: 30%;  
+    }
+
+
+    .fa-star{
+      
+        font-size: 14px;
+        }
+        
+        
+        h2{
+            font-size: 15px;
+            
+        }
+        p{
+            display: none;
+        }
+        
+        .line{
+         
+          top: 0;
+            font-size: 6px;
+        }
+        
+        .buttonbtn{
+      font-size: 15px;
+            padding: 3px;
+          
+        }
+
+
+        h5{
+          font-size: 12px;
+           top: 10px;
+            
+        }
+        
+        .fa-cutlery{
+           
+            font-size: 15px;
+           
+
+        }
+        
+        .fa-check-square-o{
+            font-size: 15px;
+            
+        }
+    
+        .ranking img{
+          
+        position: relative;
+            left: 100%;
+            top: 15px;
+            
+        }
+
+        .zone1 img{
+        
+            top: 5px;
+    margin-right: 30px;
+        }
+
+        .zone2{
+            margin-right: 40px;
+        }
+
+        .buttonbtn{
+           margin-top: 10px;
+                
+              }
+      
+  }
+
+
+
+  @media only screen and (max-width: 620px) {
+
+    .frame1{
+        
+         height: 170px;
+       
+     }
+
+     .hakuicon{
+        left: 28%;  
+    }
+
+     a{
+        font-size: 14px;
+    }
+
+    .fa-star{
+      
+        font-size: 10px;
+       
+        }
+        
+        
+        h2{
+           
+            font-size: 14px;
+            
+        }
+        p{
+            display: none;
+        }
+        
+        .line{
+         
+          display: none;
+        }
+        
+        .buttonbtn{
+      font-size: 12px;
+            padding: 3px;
+         width: 80px;
+         margin-right: 3px;
+        }
+
+
+        h5{
+          font-size: 10px;
+           top: 10px;
+            
+        }
+        
+        .fa-cutlery{
+           
+            font-size: 15px;
+           
+
+        }
+        
+        .fa-check-square-o{
+            font-size: 15px;
+            
+        }
+    
+        .ranking img{
+          
+        position: relative;
+            left: 100%;
+            top: 15px;
+            height: 20px;
+        }
+
+        .zone1 img{
+        width: 30px;
+            top: 5px;
+    margin-right: 30px;
+        }
+
+        .zone2{
+            margin-right: 40px;
+            
+        }
+
+        .buttonbtn{
+           margin-top: 10px;
+                
+              }
+      
+  }
+
+  @media only screen and (max-width: 550px) {
+    .hakuicon{
+        left: 27%;  
+    }
+  }
+
+
+
+  @media only screen and (max-width: 500px) {
+h1{
+    display: none;
+}
+    
+        .ranking img{
+          
+       display: none;
+        }
+
+        .frame1{
+            width: 100%;
+            height: 160px;
+        }
+
+        .hakuicon{
+            left: 36%;  
+        }
+    
+   
+
+        .imgcontent{
+            height: 70%;
+            margin-top: 5%;
+            border-radius: 200px;
+            width: 115px;
+            margin-left: 10px;
+        }
+
+        #hakusyotto{
+            font-size: 20px;
+            width: 100%;
+            margin-left: 3%;
+        }
+
+        .hakulaatikko{
+            margin-bottom: 20px;
+            
+        }
+        
+  #formcontainer{
+      width: 100%;
+      margin-left: 4%;
+      margin-bottom: 5px;
+  }
+  #container{
+      margin-top: 0;
+      margin-left: 4%;
+  }
+        .hakunappi{
+         
+            width:33.3%;
+        
+            height: 100px;
+            
+        }
+        
+        .about{
+            width:33.3%;
+            height: 100px;
+        
+        }
+        
+        .lataus{
+      
+            width:33.3%;
+            height: 100px;
+        }
+      
+  }
+
+
+
+   
+  @media only screen and (max-width: 400px) {
+
+    h1{
+        display: none;
+    }
+   
+    .hakulaatikko{
+        margin-left: 15%;
+    }
+    .frame1{
+        
+         height: 120px;
+       
+     }
+
+     .hakuicon{
+        left: 43%;  
+    }
+
+
+    .fa-star{
+      
+        display: none;
+       
+        }
+        
+        
+        h2{
+           
+            font-size: 12px;
+            
+        }
+      
+       
+        .buttonbtn{
+      font-size: 11px;
+            
+         width: 60px;
+         margin-right: 3px;
+        }
+
+
+        h5{
+          font-size: 8px;
+           top: 10px;
+            
+        }
+        
+        .fa-cutlery{
+           
+            font-size: 10px;
+           
+
+        }
+        
+        .fa-check-square-o{
+            font-size: 10px;
+            
+        }
+    
+        .hakunappi{
+         
+            width:80%;
+        
+            height: 100px;
+            
+        }
+        
+        .about{
+        width: 80%;
+            height: 100px;
+        
+        }
+        
+        .lataus{
+      
+            width: 80%;
+            height: 100px;
+        }
+
+        #container{
+            margin-top: 10px;
+        }
+
+        .imgcontent{
+            height: 60%;
+            margin-top: 8%;
+            border-radius: 100px;
+            width: 75px;
+            margin-left: 10px;
+        }
+
+        #hakusyotto{
+            font-size: 18px;
+        }
+        
+  }
+
+  @media only screen and (max-width: 360px) {
+  .hakuicon{
+    left: 41%;  
+}
+
+.hakulaatikko{
+    margin-left: 10%;
+}
+
+  }
+  
+  @media only screen and (max-width: 330px) {
+
+    h1{
+        display: none;
+    }
+
+    .hakuicon{
+        left: 39%;  
+    }
+   
+    .hakulaatikko{
+        margin-left: 15%;
+    }
+    .frame1{
+        
+         height: 120px;
+       
+     }
+
+    .fa-star{
+      
+        display: none;
+       
+        }
+        
+        
+        h2{
+           
+            font-size: 12px;
+            
+        }
+      
+       
+        .buttonbtn{
+      font-size: 11px;
+            
+         width: 60px;
+         margin-right: 3px;
+        }
+
+
+        h5{
+          font-size: 8px;
+           top: 10px;
+            
+        }
+        
+        .fa-cutlery{
+           
+            font-size: 10px;
+           
+
+        }
+        
+        .fa-check-square-o{
+            font-size: 10px;
+            
+        }
+    
+        .hakunappi{
+         
+            width:80%;
+        
+            height: 100px;
+            
+        }
+        
+        .about{
+        width: 80%;
+            height: 100px;
+        
+        }
+        
+        .lataus{
+      
+            width: 80%;
+            height: 100px;
+        }
+
+        #container{
+            margin-top: 10px;
+        }
+
+        .imgcontent{
+            height: 60%;
+            margin-top: 8%;
+            border-radius: 100px;
+            width: 80px;
+            margin-left: 10px;
+        }
+
+        #hahusyotto{
+            font-size: 15px;
+        }
+        
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+   
+
+
+

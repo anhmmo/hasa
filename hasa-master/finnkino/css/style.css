@@ -1,0 +1,2032 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,700i&display=swap');
+body{
+margin: 0;
+overflow-x: hidden;
+background: #fafafa;
+/*background: #ff2e44;*/
+color: rgb(99, 96, 96);
+font-family: 'Montserrat', sans-serif;
+text-shadow: 0 1px 0 #fff;
+
+}
+
+/* ----------- Go to top button ---------------*/
+
+.myBtn {
+  visibility: hidden;
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  z-index: 2500;
+  font-size: 20px;
+  border: none;
+  outline: none;
+background-image: linear-gradient(to right bottom, rgba(255, 234, 0, 0.8),rgba(180, 60, 52, 0.8)) ;
+background-image: -ms-linear-gradient(to right bottom, rgba(255, 234, 0, 0.8),rgba(180, 60, 52, 0.8)) ;
+background-image: -webkit-linear-gradient(to right bottom, rgba(255, 234, 0, 0.8),rgba(180, 60, 52, 0.8)) ;
+background-image: -moz-linear-gradient(to right bottom, rgba(255, 234, 0, 0.8),rgba(180, 60, 52, 0.8)) ;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(48, 47, 47, 0.2);
+  
+}
+
+.myBtn:hover {
+
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#FFEB3B),to(#03c2af));background-image: -o-linear-gradient(left top, #FFEB3B,#03c2af);background-image: linear-gradient(to right bottom, #FFEB3B,#03c2af);
+}
+
+
+
+
+/* ----------- Search area ---------------*/
+
+.hakulaatikko{
+  display: flex;
+  justify-content: center;
+position: relative;
+top: -65px;
+left: -2%;
+}
+
+.paivamaara{
+visibility: visible;
+  position: relative;
+  top: 12px;
+  color: rgb(143, 240, 183);
+}
+
+.hakulaatikko:hover .paivamaara{
+  visibility: hidden;
+    
+  }
+
+  .inbox:not(:first-child){
+    margin-left: 10px;
+  }
+
+
+
+.paivahaku{
+  
+  position: relative;
+  top: 120px;
+  padding: 20px;
+  width: 300px;
+  border-radius: 200px;
+  border: 2px solid #ffffff;
+  font-size: 22px;
+  color: white;
+  background-image: linear-gradient(to right bottom, #FFEB3B,#03c2af);
+  box-shadow: 0 4px 15px rgba(48, 47, 47, 0.2);
+
+}
+#pvm{
+  
+  width: 200px;
+  padding: 17.5px;
+}
+
+option{
+  color: rgb(61, 58, 58);
+}
+
+.paivahaku:active{
+ 
+  outline: 0;
+  
+}
+
+.paivahaku:focus{
+ 
+  outline: 0;
+ 
+}
+
+
+.hakubtn{
+  position: relative;
+  top: 120px;
+  padding: 25px;
+  border-radius: 30px;
+  border: 2px solid white;
+background-image: linear-gradient(to right bottom, rgba(255, 234, 0, 0.8),rgba(180, 60, 52, 0.8)) ;
+
+}
+.hakubtn:hover{
+
+  top: 120px;
+
+}
+
+.hakubtn:active{
+
+  top: 122px;
+
+}
+
+
+/* ----------- Navigation button ---------------*/
+
+.navigation__checkbox {
+  display: none;
+}
+
+.navigation__button {
+  background-color: #fff;
+  height: 6rem;
+  width: 6rem;
+  position: fixed;
+  top: 2.5rem;
+  right: 1.5rem;
+  border-radius: 50%;
+  z-index: 2000;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+}
+
+
+.navigation__background {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 3rem;
+  right: 2rem;
+  background-image: linear-gradient(to right bottom, rgb(245, 223, 26),#03c2af); 
+  z-index: 1000;
+  transition: transform .8s;
+ 
+}
+
+
+.navigation__nav {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all .8s; 
+}
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ list-style-type: none;
+  text-align: center;
+  width: 100%;
+}
+
+.navigation__item {
+  margin: 1rem;
+}
+
+.navigation__link,
+.navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: radial-gradient(150% 200% ellipse at 115%, #fff 0%, #fff 50%, transparent 50%);
+  background-size: 250%;
+  transition: all .4s;
+}
+
+
+.navigation__link:hover,
+.navigation__link:active {
+  background-position: 100%;
+  color: #37d36b;
+  transform: translateX(1rem);
+ border-radius: 3rem;
+}
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80);
+}
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%;
+}
+
+.navigation__icon {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.navigation__icon,
+.navigation__icon::before,
+.navigation__icon::after {
+  width: 3rem;
+  height: 2px;
+  background-color: #333;
+  display: inline-block;
+}
+
+.navigation__icon::before,
+.navigation__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.navigation__icon::before {
+  top: -.8rem;
+}
+
+.navigation__icon::after {
+  top: .8rem;
+}
+
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem;
+}
+
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem;
+}
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon {
+  background-color: transparent;
+}
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+
+}
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+
+/* ----------- Map --------------------------------*/
+
+#theatreSelect,
+#showMapSelect{
+  margin: 0;
+  width: 0;
+  height: 0;
+}
+
+.mapVisible {
+  visibility: visible;
+  height: 500px;
+ 
+}
+
+.mapHidden {
+  height: 0px;
+  visibility: hidden;
+}
+
+#routingArea {
+  position: relative;
+  margin-top: 20px;
+}
+
+label{
+  font-size: 20px;
+}
+
+.mapLabel{
+padding: 18px;
+
+}
+
+#mapForm input{
+  font-size: 18px;
+  border: 0;
+  outline: 0;
+  border-radius: 30px;
+  margin-top: 10px;
+  text-align: center;
+  border: 1px solid #ffd900;
+  color: #3f2d2d;
+  
+}
+
+#hideMapButton {
+ 
+  position: absolute;
+  top: -80px;
+  left: 20px;
+  z-index: 2600;
+  font-size: 18px;
+  border: none;
+  outline: none;
+background-image: linear-gradient(to right bottom, rgba(255, 234, 0, 0.8),rgba(180, 60, 52, 0.8)) ;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(48, 47, 47, 0.2);
+  
+}
+
+#hideMapButton:hover {
+
+  background-image: linear-gradient(to right bottom, #FFEB3B,#03c2af);
+}
+
+#routing { 
+  margin: auto;
+  width: 76%;
+  display: flex;
+ 
+}
+
+#form {
+  width: 40%;
+  margin: auto;
+ 
+}
+
+
+
+#mapForm {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+#mapForm label {
+  width: 28%;
+}
+
+#mapForm input {
+  width: 55%;
+  
+}
+
+#map {
+  width: 60%;
+  border: 3px solid white;
+  border-radius: 20px;
+}
+
+#reittihakuNappi{
+  margin-top: 20px;
+  width: 70%;
+ background-image: linear-gradient(to right bottom, rgba(255, 234, 0, 0.8), rgba(180, 60, 52, 0.8));
+    padding: 20px;
+    border-radius: 30px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    margin-left: 16%;
+}
+             
+/* ----------- Main film items area ---------------*/
+
+.list-film{
+display: flex;
+justify-content: center;
+margin-left: 5px;
+margin-right: 5px;
+flex-wrap: wrap;
+
+}
+
+
+.one-film{
+  position: relative;
+   box-sizing: border-box;
+   overflow: hidden;
+width: 25%;
+border: 1.5px solid #e6e5e5;
+border-radius: 5px;
+background: white;
+height: 460px;
+margin-top: 40px;
+margin-bottom: 40px;
+box-shadow: 0 4px 15px rgba(48, 47, 47, 0.2);
+border-radius: 13px;
+transition: all 1s;
+}
+
+
+.one-film{
+
+margin-left: 30px;
+
+}
+
+.picture{
+  
+width: 100%;
+
+transition: all 0.5s;
+}
+
+.picture:hover{
+    opacity: 0.9;
+    cursor: pointer;
+    transform: scale(1.2);
+
+    }
+    
+  
+    .fa-play-circle   {
+      position: absolute;
+      top: 5%;
+      left: 43%;
+      border-radius: 50%;
+      font-size: 50px;   
+      line-height: 100px;
+      cursor: pointer;
+      color: #ebe07d;
+      transform: translate(-50%, -50%) scale(0);
+  transition: transform 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
+
+    
+ 
+    .one-film:hover .fa-play-circle{
+      transform: scale(1.5);
+
+      }
+
+h2, p{
+text-align: center;
+}
+
+
+
+.nappi{
+    display: flex;
+    justify-content: center;
+}
+
+
+button{
+  font-family: 'Fredoka One', cursive;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  text-transform: uppercase;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px 20px;
+  border-radius: 20px;
+
+}
+
+button a{
+ text-decoration: none;
+ color: white;
+
+}
+
+button:hover{
+  box-shadow: 0px 3px #d3ae09;
+  top: 2px;
+}
+
+button:active{
+  box-shadow: none;
+  top: 6px;
+}
+
+.buttonactive:hover{
+  box-shadow: 0px 3px #00bb8c;
+  top: 2px;
+}
+
+.buttonactive:active{
+  box-shadow: none;
+  top: 6px;
+}
+
+button:not(:first-child){
+margin-left: 15px;
+}
+
+.green{
+  background-image: linear-gradient(to right bottom, #FFEB3B,#03c2af) ;
+}
+
+.blue{
+  background-image: linear-gradient(to right bottom, rgba(255, 234, 0, 0.8),rgba(180, 60, 52, 0.8)) ;
+}
+
+.green:hover{
+cursor: pointer;
+border: 1px solid rgb(214, 214, 214);
+border-radius: 25px;
+
+
+}
+
+
+
+.blue:hover{
+  cursor: pointer;
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 25px;
+  }
+
+
+
+.film-icon{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.age:not(:first-child){
+  margin-left: 20px;
+}
+
+
+
+.line{
+height: 15px;
+background-image: linear-gradient(to right bottom, #FFEB3B,#03c2af) ;
+width: 100%;
+position: absolute;
+bottom: 0;
+}
+
+.line2{
+  height: 15px;
+  background-image: linear-gradient(to right bottom, rgba(255, 234, 0, 0.8),rgba(180, 60, 52, 0.8)) ;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  }
+ 
+
+
+  .notfound{
+    margin: auto;
+    font-family: 'Fredoka One', cursive;
+    padding: 50px;
+    background-image: linear-gradient(to right bottom, rgb(245, 223, 26),#03c2af); 
+    position: relative;
+    top: 150px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    width: 70%;
+    box-shadow: 10px 14px 15px rgba(48, 47, 47, 0.2);
+    border: 5px solid white;
+  }
+
+  .overlay {
+    z-index: 2;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+ 
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+z-index: 4;
+}
+
+.popup {
+  margin: 33px auto;
+  padding: 50px;
+  background: #fff;
+  border-radius: 5px;
+  width:50%;
+  position: relative;
+  
+}
+
+/* lataus popup*/
+
+.popup p{
+    font-size: 25px;
+  
+  }
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+ 
+  overflow: auto;
+}
+
+
+
+
+
+  @media only screen and (max-width: 1400px) {
+    button{
+      
+      font-size: 15px;
+      padding: 15px 15px;
+      border-radius: 15px;
+    
+    }
+
+    button:not(:first-child){
+      margin-left: 8px;
+      }
+
+    h2{
+      font-size: 20px;
+    }
+
+    .one-film{
+    
+    height: 420px;
+  
+    }
+    
+  }
+
+
+  @media only screen and (max-width: 1200px) {
+
+
+
+    .one-film{
+
+      margin-left: 15px;
+      
+      }
+    /*map for mobile*/
+    .mapVisible {
+      
+      height: 450px;
+     
+    }
+    
+    
+    label{
+      font-size: 18px;
+    }
+    
+    .mapLabel{
+    padding: 16px;
+    
+    }
+
+    #routing { 
+      margin-top: 50px;
+     
+    }
+    
+    #mapForm input{
+      font-size: 16px;
+    }
+    
+    #hideMapButton {
+     
+      position: absolute;
+      top: 2px;
+      left: 48.5%;
+      font-size: 17px;
+      padding: 15px;
+    }
+    
+    
+    #routing { 
+     
+      width: 90%;
+     
+     
+    }
+    
+    
+    
+    #reittihakuNappi{
+      margin-top: 18px;
+        padding: 18px;
+        font-size: 16px;
+    }
+
+      /*map for mobile end*/
+
+    .myBtn {
+  
+      left: 20px;
+  
+    }
+
+    .navigation__button {
+      
+      height: 5rem;
+      width: 5rem;
+      right: 1rem;
+      top: 3.2rem;
+    }
+    
+    
+    .navigation__background {
+      height: 4rem;
+      width: 4rem;
+      right: 1.5rem;
+      top: 3.7rem;
+     
+    }
+
+    .navigation__icon {
+      margin-top: 2.5rem;
+    }
+
+    .navigation__icon,
+.navigation__icon::before,
+.navigation__icon::after {
+  width: 2rem;
+  height: 2px;
+
+}
+
+    button{
+      
+      font-size: 20px;
+      padding: 20px 20px;
+      border-radius: 20px;
+    
+    }
+
+    
+    button:not(:first-child){
+      margin-left: 5px;
+      }
+
+    h2{
+      font-size: 25px;
+    }
+
+    .one-film{
+     
+    width: 40%;
+   
+    height: 500px;
+   
+    }
+    
+  }
+
+
+  @media only screen and (max-width: 900px) {
+
+
+
+    .one-film{
+
+      margin-left: 0;
+      
+      }
+
+    /*map for mobile*/
+
+    
+
+    .mapVisible {
+      
+      height: 750px;
+     
+    }
+    
+    
+    label{
+      font-size: 18px;
+    }
+    
+    .mapLabel{
+    padding: 16px;
+   
+    }
+    
+    #mapForm input{
+      font-size: 16px;
+    }
+    
+    #hideMapButton {
+     
+      position: absolute;
+      top: 2px;
+      left: 48.5%;
+      font-size: 17px;
+      padding: 15px;
+    }
+    
+    
+    #routing { 
+     
+      width: 100%;
+    flex-wrap: wrap;
+    
+    }
+    
+    #form{
+      width: 80%;
+      margin-left: 10%;
+    }
+    
+    #reittihakuNappi{
+      margin-top: 18px;
+        padding: 18px;
+        font-size: 16px;
+    }
+
+    #map{
+  
+      width: 80%;
+      margin-left: 10%;
+      height: 400px;
+      
+    }
+
+      /*map for mobile end*/
+
+
+
+
+
+    .hakulaatikko{
+    top: -57px;
+    }
+    
+    .paivamaara{
+      top: 15px;
+      font-size: 18px;
+    }
+    
+    .hakulaatikko:hover .paivamaara{
+      visibility: hidden;
+        
+      }
+    
+      .inbox:not(:first-child){
+        margin-left: 5px;
+      }
+    
+    
+    
+    .paivahaku{
+      
+      padding: 18px;
+      width: 250px;
+      font-size: 18px;
+    
+    }
+    #pvm{
+      padding: 15px;
+    }
+    
+    .hakubtn{
+      top: 120px;
+      padding: 21px;
+      font-size: 15px;
+    }
+    .hakubtn:hover{
+    
+      top: 120px;
+    
+    }
+    
+    .hakubtn:active{
+    
+      top: 122px;
+    
+    }
+
+
+
+
+
+
+
+
+    .myBtn {
+  
+      left: 12px;
+      padding: 13px;
+      font-size: 15px;
+  
+    }
+
+
+
+
+
+    .navigation__button {
+      right: 0.2rem;
+    }
+    
+    
+    .navigation__background {
+      right: 1rem;
+    }
+
+    .navigation__icon {
+      margin-top: 2.5rem;
+    }
+
+    .navigation__icon,
+.navigation__icon::before,
+.navigation__icon::after {
+  width: 2rem;
+  height: 2px;
+
+}
+
+    button{
+      
+      font-size: 30px;
+      padding: 25px 25px;
+      border-radius: 25px;
+    
+    }
+
+    
+    button:not(:first-child){
+      margin-left: 5px;
+      }
+
+    h2{
+      font-size: 30px;
+    }
+    p{
+      font-size: 25px;
+    }
+
+    .one-film{
+      margin-top: 120px;
+    width: 80%;
+   
+    height: 660px;
+   
+    }
+
+   
+
+
+      .fa-play-circle   {
+        
+        top: 10%;
+      
+        font-size: 60px;   
+        
+      }
+    
+  }
+
+
+
+
+
+  @media only screen and (max-width: 780px) {
+
+ /*map for mobile*/
+
+    
+
+ .mapVisible {
+      
+  height: 570px;
+ 
+}
+
+
+label{
+  font-size: 16px;
+}
+
+.mapLabel{
+padding: 15px;
+
+}
+
+#hideMapButton {
+  top: 5px;
+  left: 45%;
+  font-size: 15px;
+  padding: 13px;
+}
+
+
+
+
+#reittihakuNappi{
+  margin-top: 15px;
+    padding: 10px;
+    font-size: 14px;
+    width: 30%;
+    left: 35%;
+}
+
+#map{
+
+  width: 80%;
+  margin-left: 10%;
+  height: 300px;
+  
+}
+
+  /*map for mobile end*/
+
+    .hakulaatikko{
+      top: -57px;
+      }
+      
+      .paivamaara{
+        top: 15px;
+        font-size: 15px;
+      }
+      
+      .hakulaatikko:hover .paivamaara{
+        visibility: hidden;
+          
+        }
+      
+        .inbox:not(:first-child){
+          margin-left: 3px;
+        }
+      
+      
+      
+      .paivahaku{  
+        padding: 15px;
+        font-size: 15px;
+      }
+      #pvm{
+        padding: 13px;
+        width: 120px;
+      }
+      
+      .hakubtn{
+        padding: 17px;
+        font-size: 15px;
+      }
+
+  }
+
+
+
+  
+
+
+  @media only screen and (max-width: 720px) {
+
+    /*map for mobile*/
+    #mapForm label {
+      position: relative;
+      top: 20px;
+      width: 20%;
+    }
+    
+    #mapForm input {
+      width: 50%;
+      
+    }
+    
+
+ .mapVisible {
+      
+  height: 750px;
+ 
+}
+
+
+label{
+  font-size: 16px;
+}
+
+.mapLabel{
+padding: 15px;
+
+}
+
+
+#reittihakuNappi{
+  margin-top: 15px;
+    padding: 10px;
+    font-size: 14px;
+    width: 30%;
+    left: 35%;
+}
+
+#map{
+
+  width: 80%;
+  margin-left: 10%;
+  height: 250px;
+  
+}
+
+#reittihakuNappi{
+
+    left: 32%;
+}
+
+  /*map for mobile end*/
+   
+      .hakulaatikko{
+        top: -57px;
+        }
+        
+        .paivamaara{
+          top: 25px;
+          font-size: 15px;
+        }
+        
+        .hakulaatikko:hover .paivamaara{
+          visibility: hidden;
+            
+          }
+        
+          .inbox:not(:first-child){
+            margin-left: 3px;
+          }
+        
+        
+        
+        .paivahaku{  
+          padding: 14px;
+          font-size: 15px;
+          width: 100px;
+           }
+        #pvm{
+          padding: 12px;
+          width: 120px;
+        }
+        
+        .hakubtn{
+          padding: 15px;
+          font-size: 15px;
+        }
+  
+    
+
+
+
+
+
+
+    .navigation__button {
+      top: 2.9rem;
+    }
+    
+
+    button{
+      
+      font-size: 25px;
+      padding: 23px 23px;
+      border-radius: 23px;
+    
+    }
+
+    
+    button:not(:first-child){
+      margin-left: 3px;
+      }
+
+    h2{
+      font-size: 26px;
+    }
+    p{
+      font-size: 23px;
+    }
+
+    .one-film{
+      margin-top: 80px;
+   
+    height: 600px;
+   
+    }
+
+    
+    input{
+      padding: 25px;
+      width: 350px;
+    }
+    
+    .buttonbox{
+    
+    padding: 25px;
+    
+    }
+
+      
+}
+
+
+
+@media only screen and (max-width: 650px) {
+
+
+/*map for mobile*/
+#hideMapButton {
+  top: 10px;
+}
+
+#mapForm label {
+  position: relative;
+  top: 10px;
+  width: 20%;
+}
+
+#mapForm input {
+  width: 48%;
+  padding: 13px;
+    font-size: 16px;
+
+}
+#mapForm input:not(:first-child) {
+
+    margin-top: 10px;
+}
+
+
+
+.mapVisible {
+  
+height: 600px;
+
+}
+
+
+label{
+font-size: 16px;
+}
+
+.mapLabel{
+padding: 15px;
+
+}
+
+
+#reittihakuNappi{
+margin-top: 10px;
+padding: 10px;
+font-size: 14px;
+width: 30%;
+left: 35%;
+}
+
+#map{
+
+width: 80%;
+margin-left: 10%;
+height: 270px;
+
+}
+
+#reittihakuNappi{
+
+left: 32%;
+}
+
+/*map for mobile end*/
+
+  
+
+  .myBtn {
+  
+    left: 5px;
+   
+
+  }
+
+  .navigation__button {
+  
+    right: 0.1rem;
+  }
+
+
+  
+  
+  .navigation__background {
+
+    right: .6rem;
+    top: 3rem;
+   
+  }
+  
+
+  button{
+    
+    font-size: 23px;
+    padding: 20px 20px;
+    border-radius: 20px;
+  
+  }
+
+  
+  button:not(:first-child){
+    margin-left: 3px;
+    }
+
+  h2{
+    font-size: 24px;
+  }
+  p{
+    font-size: 21px;
+  }
+
+  .one-film{
+  
+  height: 550px;
+ 
+  }
+
+    
+}
+
+
+@media only screen and (max-width: 560px) {
+
+
+
+/*map for mobile*/
+#hideMapButton {
+  top: 10px;
+}
+
+#mapForm label {
+  position: relative;
+  top: 10px;
+  width: 20%;
+}
+
+#mapForm input {
+  width: 48%;
+  padding: 12px;
+    font-size: 14px;
+
+}
+#mapForm input:not(:first-child) {
+
+    margin-top: 8px;
+}
+
+
+
+.mapVisible {
+  
+height: 600px;
+
+}
+
+
+label{
+font-size: 14px;
+}
+
+.mapLabel{
+padding: 14px;
+
+}
+
+
+#reittihakuNappi{
+margin-top: 7px;
+font-size: 12px;
+}
+
+#map{
+
+width: 96%;
+margin-left: 2%;
+height: 250px;
+
+}
+
+
+
+/*map for mobile end*/
+
+
+
+  .hakulaatikko{
+    top: -63px;
+    }
+    
+    .paivamaara{
+      top: 25px;
+      font-size: 13px;
+    }
+    
+    .hakulaatikko:hover .paivamaara{
+      visibility: hidden;
+        
+      }
+    
+      .inbox:not(:first-child){
+        margin-left: 3px;
+      }
+    
+    
+    
+    .paivahaku{  
+      padding: 13px;
+      font-size: 14px;
+      width: 92px;
+       }
+    #pvm{
+      padding: 11px;
+      width: 112px;
+      font-size: 14px;
+    }
+    
+    .hakubtn{
+      padding: 15px;
+      font-size: 12px;
+    }
+
+
+
+  .navigation__icon::before {
+    top: -.5rem;
+  }
+  
+  .navigation__icon::after {
+    top: .5rem;
+  }
+  
+  .navigation__button:hover .navigation__icon::before {
+    top: -0.5rem;
+  }
+  
+  .navigation__button:hover .navigation__icon::after {
+    top: 0.5rem;
+  }
+
+  .myBtn {
+  
+   margin-left: 0;
+  padding: 10px;
+   font-size: 12px;
+   
+
+  }
+
+  .navigation__button {
+  
+    right: .3rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    top: 3.3rem;
+  }
+
+
+  
+  
+  .navigation__background {
+
+    right: .7rem;
+    top: 3.5rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .navigation__icon {
+
+    margin-top: 1.8rem;
+  }
+
+  .navigation__icon,
+.navigation__icon::before,
+.navigation__icon::after {
+  width: 1.7rem;
+  height: 1.5px;
+}
+  
+
+  button{
+    
+    font-size: 18px;
+    padding: 15px 15px;
+    border-radius: 15px;
+  
+  }
+
+  h2{
+    font-size: 20px;
+  }
+  p{
+    font-size: 18px;
+  }
+
+  .one-film{
+    margin-top: 30px;
+  height: 460px;
+ 
+  }
+
+  
+  input{
+    padding: 20px;
+    width: 250px;
+  }
+  
+  .buttonbox{
+  
+  padding: 20px;
+  
+  }
+
+  .fa-play-circle   {
+        
+    top: 5%;
+  
+    font-size: 40px;   
+    
+  }
+
+  .footertext{
+
+    font-size: 13px;
+   
+  }
+
+}
+
+
+
+@media only screen and (max-width: 450px) {
+
+/*map for mobile*/
+#hideMapButton {
+  top: 20px;
+  padding: 7px;
+  font-size: 15px;
+}
+
+
+
+
+/*map for mobile end*/
+
+
+
+  .hakulaatikko{
+    top: -67px;
+    }
+    
+    .paivamaara{
+      top: 45px;
+      font-size: 10px;
+    }
+      .inbox:not(:first-child){
+        margin-left: 1px;
+      }
+    
+    .paivahaku{  
+      padding: 12px;
+      font-size: 12px;
+      width: 85px;
+       }
+    #pvm{
+      padding: 10px;
+      width: 98px;
+      font-size: 12px;
+    }
+    
+    .hakubtn{
+      padding: 15px;
+      font-size: 10px;
+    }
+
+
+
+
+  .navigation__link,
+.navigation__link:visited {
+  
+transform: translateX(-10%);
+
+}
+
+.navigation__link:hover,
+.navigation__link:active {
+
+  transform: translateX(-1rem);
+
+}
+
+  .myBtn {
+  padding: 7px;
+   font-size: 10px;
+  }
+
+  .navigation__button {
+  
+    right: .2rem;
+    width: 3rem;
+    height: 3rem;
+    top: 3.2rem;
+  }
+
+
+  
+  
+  .navigation__background {
+
+    right: .5rem;
+    top: 3.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .navigation__icon {
+
+    margin-top: 1.5rem;
+  }
+
+  .navigation__icon,
+.navigation__icon::before,
+.navigation__icon::after {
+  width: 1.2rem;
+  height: 1.5px;
+}
+
+.navigation__link,
+.navigation__link:visited {
+
+  font-size: 1.5rem;
+  
+}
+  
+
+  button{
+    
+    font-size: 14px;
+    padding: 10px 10px;
+    border-radius: 10px;
+
+  }
+
+  h2{
+    font-size: 15px;
+  }
+  p{
+    font-size: 12px;
+  }
+
+  .one-film{
+ 
+  height: 360px;
+ 
+  }
+
+  
+  input{
+    padding: 15px;
+    width: 180px;
+    height: 18px;
+    font-size: 14px;
+  }
+  
+  .buttonbox{
+ 
+    height: 20px;
+   
+    border-radius: 40px;
+    width: 60px;
+    font-size: 14px;
+  padding: 15px;
+  
+  }
+
+  .fa-play-circle   {
+        
+    top: 0;
+  
+    font-size: 30px;   
+    
+  }
+    
+}
+
+
+@media only screen and (max-width: 400px){
+  .hakulaatikko{
+    top: -65px;
+    }
+    
+    .paivamaara{
+      top: 50px;
+      font-size: 10px;
+    }
+      .inbox:not(:first-child){
+        margin-left: 0px;
+      }
+    
+    .paivahaku{  
+      padding: 11px;
+      font-size: 10px;
+      width: 75px;
+       }
+    #pvm{
+      padding: 8px;
+      width: 83px;
+      font-size: 10px;
+    }
+    
+    .hakubtn{
+      padding: 12.5px;
+      font-size: 10px;
+    }
+
+
+
+
+
+
+}
+
+@media only screen and (max-width: 380px) {
+
+/*map for mobile*/
+#hideMapButton {
+  top: 20px;
+  padding: 7px;
+  font-size: 15px;
+}
+
+#mapForm label {
+  position: relative;
+  top: -7px;
+  width: 30%;
+}
+
+#mapForm input {
+  width: 50%;
+  padding: 7px;
+    font-size: 14px;
+
+}
+#mapForm input:not(:first-child) {
+
+    margin-top: 1px;
+}
+
+
+
+.mapVisible {
+  
+height: 580px;
+
+}
+
+
+label{
+font-size: 15px;
+}
+
+
+
+
+#reittihakuNappi{
+margin-top: 2px;
+font-size: 12px;
+padding: 8px;
+left: 38%;
+}
+
+#map{
+height: 250px;
+
+}
+
+
+
+/*map for mobile end*/
+}
+
+@media only screen and (max-width: 340px) {
+
+  /*map for mobile*/
+#hideMapButton {
+  top: 5px;
+  padding: 7px;
+  font-size: 15px;
+}
+
+#mapForm label {
+  position: relative;
+  top: -7px;
+  width: 30%;
+}
+
+#mapForm input {
+  width: 50%;
+  padding: 5px;
+    font-size: 12px;
+}
+
+.mapVisible {
+  
+height: 550px;
+
+}
+
+
+label{
+font-size: 13px;
+}
+
+#reittihakuNappi{
+font-size: 10px;
+padding: 5px;
+margin-top: 2px;
+}
+
+
+
+
+
+/*map for mobile end*/
+
+
+  .hakulaatikko{
+    top: -100px;
+    left: 5px;
+    }
+    
+    .paivamaara{
+      top: 65px;
+      font-size: 8px;
+    }
+      .inbox:not(:first-child){
+        margin-left: 0px;
+      }
+    
+    .paivahaku{  
+      padding: 10px;
+      font-size: 10px;
+      width: 75px;
+       }
+    #pvm{
+      padding: 7px;
+      width: 83px;
+      font-size: 10px;
+    }
+    
+    .hakubtn{
+      padding: 11px;
+      font-size: 10px;
+    }
+
+
+
+
+  .fa-play-circle   {
+        
+    top: -3%;
+  
+    font-size: 20px;   
+    
+  }
+  
+  .age:not(:first-child){
+    margin-left: 8px;
+  }
+
+  .age{
+    width: 20%;
+  }
+  
+
+
+.navigation__link,
+.navigation__link:visited {
+
+  font-size: 1rem;
+  
+}
+
+  .navigation__button {
+  
+    right: 0.1rem;
+ top: 3.5rem;
+  }
+
+  
+  .navigation__background {
+
+    right: .4rem;
+    top: 3.9rem;
+  }
+
+  input{
+
+    width: 120px;
+  
+  }
+  
+  .one-film{
+ 
+    height: 340px;
+   
+    }
+
+    
+}
+
+
+  @media only screen and (min-width: 1650px) {
+
+    
+    button{
+      
+      font-size: 30px;
+      padding: 20px 20px;
+      border-radius: 20px;
+    
+    }
+
+    
+    button:not(:first-child){
+      margin-left: 5px;
+      }
+
+    h2{
+      font-size: 25px;
+    }
+    p{
+      font-size: 20px;
+    }
+
+    .one-film{
+    height: 600px;
+   
+    }
+    
+  }
+
+
+  
+
+
+  /* ----------- scroll right tab ---------------*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  
+  background-image: linear-gradient(to right bottom, rgb(255, 234, 0, 0.8),rgba(180, 60, 52, 0.8)) ;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    
+  background-image: linear-gradient(to right bottom, #FFEB3B,#03c2af) ;
+  
+}
+
+
+
+
+
+
+

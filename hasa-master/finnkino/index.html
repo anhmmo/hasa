@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FINNKINO LEFFAHAKU</title>
+    
+    <link rel="shortcut icon" href="https://img.icons8.com/cute-clipart/100/000000/film-reel.png" type="image/x-icon">
+  
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+			   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+			   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+	    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+	    crossorigin=""></script>
+
+    <!-- Leaflet routing machine -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    
+<link rel="stylesheet" href="css/html5-simple-date-input-polyfill.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/scripts.js"></script>
+</head>
+
+<body>
+          
+    
+          <div class="hakulaatikko">
+              <div class="inbox">
+                   <input type="date" class="paivahaku" id="pvm">
+                    <p class="paivamaara">Valitse päivämäärä</p>
+            </div>
+                <div class="inbox">
+                <select name="mySelect" class="paivahaku" id="teatteri">
+                        <option value="0000">Valitse Elokuvateatterisi</option>
+                        <option value="1014">Pääkaupunkiseutu</option>
+                        <option value="1012">Espoo</option>
+                        <option value="1039">Espoo: OMENA</option>
+                        <option value="1038">Espoo: SELLO</option>
+                        <option value="1002">Helsinki</option>
+                        <option value="1045">Helsinki: ITIS</option>
+                        <option value="1031">Helsinki: KINOPALATSI</option>
+                        <option value="1032">Helsinki: MAXIM</option>
+                        <option value="1033">Helsinki: TENNISPALATSI</option>
+                        <option value="1013">Vantaa: FLAMINGO</option>
+                        <option value="1015">Jyväskylä: Fantasia</option>
+                        <option value="1016">Kuopio: SCALA</option>
+                        <option value="1017">Lahti: KUVAPALATSI</option>
+                        <option value="1041">Lappeenranta: STRAND</option>
+                        <option value="1018">Oulu: PLAZA</option>
+                        <option value="1019">Pori: PROMENADI</option>
+                        <option value="1021">Tampere</option>
+                        <option value="1034">Tampere: CINE ATLAS</option>
+                        <option value="1035">Tampere: PLEVNA</option>
+                        <option value="1022">Turku: KINOPALATSI</option>
+                      </select>
+                    </div>
+                    <div class="inbox">
+            <button type="button" class="hakubtn" onclick="getMovies()">Hae elokuvat</button>
+        </div>
+          </div>
+
+
+
+
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__background">&nbsp;</div>
+        <div class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a target="_blank" href="http://users.metropolia.fi/~aun/hasa/" class="navigation__link">kotivisu</a></li>
+                <li class="navigation__item"><a target="_blank" href="http://users.metropolia.fi/~aun/hasa/meista" class="navigation__link">meistä</a></li>
+                <li class="navigation__item"><a target="_blank" href="http://users.metropolia.fi/~aun/hasa/projektit" class="navigation__link">projektit</a></li>
+                <li class="navigation__item"><a target="" href="#popup" class="navigation__link">lataa</a></li>
+              
+            </ul>
+        </div>
+    </div>
+                
+    <div id="popup" class="overlay">
+      <div class="popup">
+          <h2>Lataus</h2>
+          <a class="close" href="#">&times;</a>
+          <div class="content">
+             <p> Jos tykkäät tätä sivua, ottakaa yhteyttä sähköposti aun@metropolia.fi </p>
+
+          </div>
+      </div>
+  </div>
+
+ <p id="ilmoitus" class="null"></p>
+
+
+
+
+ <div id="routingArea">
+  <button class="mapHidden" id="hideMapButton">Hide Map</button>
+   <div id="mapSelect">
+     <select class="mapHiddenx" id="theatreSelect"></select>
+     <select class="mapHiddenx" id="showMapSelect"></select>
+   </div>
+
+   <div class="mapHidden" id="routing">
+     <div id="form">
+	<form id="mapForm">
+	  <label class="mapLabel">Lähtöosoite </label><input type="text" value="" id="lahto_osoite" /> <br />
+	  <label class="mapLabel">Numero </label><input type="text" maxlength="4" size="4" value="" id="lahto_numero" /> <br />
+	  <label class="mapLabel">Kaupunki </label><input type="text" value="" id="lahto_kaupunki" /><br />
+	  <label class="mapLabel">Kohdeosoite </label><input type="text" value="" id="kohde_osoite" /> <br />
+	  <label class="mapLabel">Numero </label><input type="text" maxlength="4" size="4" value="" id="kohde_numero" /> <br />
+	  <label class="mapLabel">Kaupunki </label><input type="text" value="" id="kohde_kaupunki" /><br />
+	  <button id="reittihakuNappi">Hae reitti</button><br />
+  </form>
+  
+     </div>
+
+     <div id="map"></div>
+   </div>
+
+
+ </div>
+
+    <div class="list-film" id="leffa">
+    </div>
+
+    <p onclick="topFunction()" class="myBtn" title="Go to top">Top</p> 
+
+
+   
+  <script src="js/kartta.js"></script>
+    <script src="js/date.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/html5-simple-date-input-polyfill.js"></script>
+  
+    
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+
+.osa {
+  box-sizing: border-box;
+  margin: 0px;
+  /* border: 1px black solid; */
+}
+
+body {
+  display: flex;
+  flex-flow: wrap;
+  position: relative;
+}
+
+#otsikko {
+  background: url("../images/routing2.png");
+  padding: 10px 0px 10px 10px;
+  width: 100%;
+  text-shadow: 0px 0, 0 1px #454443, 1px 0 #454443, 0 0px;
+}
+
+#kartta {
+  width: 64%;
+  margin: 10px;
+  padding: 10px;
+  border: 3px black solid;
+  border-radius: 3px;
+  position: relative;
+}
+
+#locateUser {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1;
+  background-color: #24305E;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+#locateUser:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+#map {
+  height: 700px;
+  z-index: 0;
+}
+
+#haku {
+  margin: 10px;
+  padding: 10px;
+  width: 30%;
+}
+
+#kauppahaku {
+  padding: 10px 0px 10px 0px;
+  border-bottom: 1px solid black;
+}
+
+#reittihaku {
+  padding: 10px 0px 10px 0px;
+  border-bottom: 1px solid black;
+}
+
+form {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+}
+
+label {
+  width: 40%;
+  padding: 2px 0px 0px 5px;
+  color: black;
+  text-shadow: 0px 0, 0 1px #454443, 1px 0 #454443, 0 0px;
+}
+
+input[type=text] {
+  width: 50%;
+  margin: 2px 0px 2px 0px;
+  border-radius: 4px;
+  padding: 5px 10px;
+  border: 2px #454443 solid;
+  color: #454443;
+}
+
+#kaupat_select {
+  margin: 2px 0px 2px 0px;
+  width: 55%;
+  float: right;
+  padding: 10px 0px 10px 0px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+input[type=text]:focus {
+  border: 2px black solid;
+  color: black;
+}
+
+.nappi {
+/* #kauppahakunappi { */
+  width: 80%;
+  background-color: #24305E;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+.nappi:hover {
+/* #kauppahakunappi:hover { */
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+footer {
+  margin: auto;
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+
+  #kartta {
+    width: 100%;
+  }
+
+  #map {
+    height: 400px;
+  }
+
+  #haku {
+    width: 100%;
+  }
+}
